@@ -118,15 +118,16 @@ Give an HTML input box a `data` attribute of `data-scan-box` and optionally incl
 
 ## Configuration Options
 
-| Option                | Type                        | Default                | Description                                                                                    |
-| --------------------- | --------------------------- | ---------------------- | ---------------------------------------------------------------------------------------------- |
-| `scanThreshold`       | `number`                    | `50`                   | Maximum milliseconds allowed between keystrokes to qualify as a scan.                          |
-| `minLength`           | `number`                    | `3`                    | Minimum number of characters to trigger a scan. Prevents short accidental inputs.              |
-| `inputSelector`       | `string`                    | `"[data-scan-box]"`    | CSS selector for target input fields.                                                          |
-| `clearButtonSelector` | `string`                    | `"[data-scan-remove]"` | Selector for buttons that clear the associated input.                                          |
-| `mode`                | `"overwrite"` or `"append"` | `"overwrite"`          | - `overwrite`: Replace the value in the first input<br>- `append`: Fill the next empty input   |
-| `onScan`              | `function`                  | `null`                 | Callback called when a scan is detected. Receives `(value, input)` as arguments.               |
-| `validation`          | `function`                  | `null`                 | Optional function to validate scanned input before inserting. Should return `true` or `false`. |
+| Option                | Type                        | Default                | Description                                                                                           |
+| --------------------- | --------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------- |
+| `scanThreshold`       | `number`                    | `50`                   | Maximum milliseconds allowed between keystrokes to qualify as a scan.                                 |
+| `minLength`           | `number`                    | `3`                    | Minimum number of characters to trigger a scan. Prevents short accidental inputs.                     |
+| `inputSelector`       | `string`                    | `"[data-scan-box]"`    | CSS selector for target input fields.                                                                 |
+| `clearButtonSelector` | `string`                    | `"[data-scan-remove]"` | Selector for buttons that clear the associated input.                                                 |
+| `mode`                | `"overwrite"` or `"append"` | `"overwrite"`          | - `overwrite`: Replace the value in the first input<br>- `append`: Fill the next empty input          |
+| `onScan`              | `function`                  | `null`                 | Callback called when a scan is detected. Receives `(value, input)` as arguments.                      |
+| `validation`          | `function`                  | `null`                 | Optional function to validate scanned input before inserting. Should return `true` or `false`.        |
+| `commitOnEnter`       | `bool`                      | `false`                | Scans will be accepted when enter is detected. If false, scans are accepted on scanThreshold timeout. |
 
 ## Contributing
 
