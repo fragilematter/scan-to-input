@@ -91,7 +91,7 @@ Then initialise the scanner detection:
 
 ```html
 <script>
-  const scanner = new ScanDetect({
+  const scanner = new ScanToInput({
     mode: 'append',
     onScan: (value, input) => {
       console.log('Scanned:', value);
